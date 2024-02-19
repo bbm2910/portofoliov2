@@ -1,0 +1,127 @@
+.btns .btn {
+	background-color: #000;
+	margin: 5% 0;
+	padding: 2px 5px;
+	border: none;
+	cursor: pointer;
+}
+
+.menu {
+	position: fixed;
+	bottom: 20%;
+}
+
+.menu button,
+button::after {
+	font-family: 'Roboto Mono', monospace;
+	display: block;
+	background: #000;
+	cursor: pointer;
+	font-size: 0.9rem;
+	color: #fff;
+	letter-spacing: 3px;
+	box-shadow: 1px 0px 0px #fff;
+	opacity: 70%;
+	transition-duration: 0.1s;
+}
+.menu button:hover {
+	opacity: 100%;
+	background-color: #fff;
+	color: #000;
+	font-weight: 700;
+}
+.menu button::after {
+	--slice-0: inset(100% 50% 50% 50%);
+	--slice-1: inset(80% -6px 0 0);
+	--slice-2: inset(50% -16px 50% 0);
+	--slice-3: inset(90% -6px 85% 0);
+	--slice-4: inset(40% -6px 43% 0);
+	--slice-5: inset(80% -6px 5% 0);
+	content: 'HOVER ME';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(
+		90deg,
+		transparent 3%,
+		#000 3%,
+		#a6f6ff 5%,
+		#577ff1 5%
+	);
+	clip-path: var(--slice-0);
+	height: 26px;
+}
+
+.menu button:hover::after {
+	animation: 0.5s glitch;
+	animation-timing-function: steps(1, end);
+}
+
+@keyframes glitch {
+	0% {
+		clip-path: var(--slice-1);
+		transform: translate(-20px, -10px);
+	}
+
+	10% {
+		clip-path: var(--slice-3);
+		transform: translate(10px, 10px);
+	}
+
+	20% {
+		clip-path: var(--slice-1);
+		transform: translate(-10px, 10px);
+	}
+
+	30% {
+		clip-path: var(--slice-3);
+		transform: translate(0px, 5px);
+	}
+
+	40% {
+		clip-path: var(--slice-2);
+		transform: translate(-5px, 0px);
+	}
+
+	50% {
+		clip-path: var(--slice-3);
+		transform: translate(5px, 0px);
+	}
+
+	60% {
+		clip-path: var(--slice-4);
+		transform: translate(5px, 10px);
+	}
+
+	70% {
+		clip-path: var(--slice-2);
+		transform: translate(-10px, 10px);
+	}
+
+	80% {
+		clip-path: var(--slice-5);
+		transform: translate(20px, -10px);
+	}
+
+	90% {
+		clip-path: var(--slice-1);
+		transform: translate(-10px, 0px);
+	}
+
+	100% {
+		clip-path: var(--slice-1);
+		transform: translate(0);
+	}
+}
+
+.btns .btn {
+	transition: 400ms;
+}
+
+.btns:hover > .btn:not(:hover) {
+	filter: blur(1px);
+	transform: scale(0.9, 0.9);
+}

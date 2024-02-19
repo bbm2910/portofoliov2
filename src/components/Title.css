@@ -1,0 +1,33 @@
+.title-container {
+	position: relative;
+	z-index: 1;
+	transition-duration: 0.3s;
+	transition-property: top, left;
+	background-color: transparent;
+	padding-left: 2%;
+	margin-top: 2%;
+	left: 8%;
+	border-left: 1px solid #fff;
+	font-size: 1.5em;
+}
+.sticky {
+	transform: scale(0.8);
+	position: fixed;
+	font-weight: 200;
+	left: 5%;
+	font-size: 1em;
+}
+.title h1 {
+	font-size: 4rem;
+	font-weight: 100;
+	margin: 0;
+	padding: 0%;
+	background: -webkit-linear-gradient(10deg, #fff 1%, #1f2a38 51%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+.title p {
+	margin: 0;
+	font-weight: 200;
+	font-size: 0.9rem;
+}
