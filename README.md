@@ -2,5 +2,5 @@
 
 Portofolio website:
 
-Deployed on [Netlify](https://bm-portofolio.netlify.app/) 
+Live on [Netlify](https://bm-portofolio.netlify.app/) 
 
